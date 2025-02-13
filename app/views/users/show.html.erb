@@ -1,0 +1,14 @@
+<h1>Your Borrowed Books</h1>
+
+<% if @current_borrowings.any? %>
+  <ul>
+    <% @current_borrowings.each do |borrowing| %>
+      <li>
+        <%= borrowing.book.title %> - Due on <%= borrowing.due_date.to_date %>
+        <%= button_to 'Return', borrowing_path(borrowing), method: :patch %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You have no books borrowed currently.</p>
+<% end %>

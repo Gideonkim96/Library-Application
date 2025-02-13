@@ -1,0 +1,10 @@
+<h1>Books</h1>
+
+<% @books.each do |book| %>
+  <div>
+    <h2><%= link_to book.title, book %></h2>
+    <p>Author: <%= book.author %></p>
+    <p>ISBN: <%= book.isbn %></p>
+    <p>Availability: <%= book.available? ? 'Available' : 'Borrowed' %></p>
+  </div>
+<% end %>
