@@ -1,24 +1,71 @@
-# README
+# Library Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Rails Version](https://img.shields.io/badge/Rails-8.0.0+-red.svg)
+![Ruby Version](https://img.shields.io/badge/Ruby-3.2.2+-blue.svg)
 
-Things you may want to cover:
+A full-featured book lending library application built with Ruby on Rails. Manage book inventory, user registrations, and book borrowing operations with ease.
 
-* Ruby version
+## Features
 
-* System dependencies
+- **User Authentication**
+  - Secure registration and login system
+  - Session management
+  - Password hashing with bcrypt
 
-* Configuration
+- **Book Management**
+  - Add books with title, author, and ISBN
+  - Unique ISBN validation
+  - Real-time availability status
+  - Detailed book view with borrowing capability
 
-* Database creation
+- **Borrowing System**
+  - Borrow books with automatic 2-week due date
+  - Return books through user profile
+  - Prevent duplicate borrowings
+  - Track borrowing history
 
-* Database initialization
+- **User Profile**
+  - View currently borrowed books
+  - See due dates for each borrowed book
+  - Return books directly from profile
 
-* How to run the test suite
+- **Validation & Security**
+  - Model validations for data integrity
+  - Database constraints
+  - CSRF protection
+  - Secure session management
 
-* Services (job queues, cache servers, search engines, etc.)
+## Requirements
 
-* Deployment instructions
+- Ruby 3.2.2 or newer
+- Rails 8.0.0 or newer
+- Bundler
 
-* ...
+## Install dependencies
+bundle install
+
+## Set up the database
+rails db:create
+rails db:migrate
+
+## Start the development server
+rails server
+
+# TESTING
+## Full test suite:
+rails test
+
+## Specific test types:
+
+# Models
+rails test test/models
+
+# Controllers
+rails test test/controllers
+
+# Integration
+rails test test/integration
+
+## APPLICATION LINK
+
+http://localhost:3000
